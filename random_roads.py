@@ -35,7 +35,7 @@ def createRoad(length, direction):
 # This is the function call for a length of road.
 # Specify the number of panels inside the parenthesis. -elk
 tploops = 0
-tpHeight = -30
+tpHeight = 30
 roadLength = 25
 while tploops < 25:
     random_x = randrange(-120, 120)
