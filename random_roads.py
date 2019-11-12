@@ -36,8 +36,13 @@ def createRoad(length, direction):
 # Specify the number of panels inside the parenthesis. -elk
 tploops = 0
 tpHeight = 30
+<<<<<<< HEAD
 roadLength = 4
 while tploops < 4:
+=======
+roadLength = 25
+while tploops < 25:
+>>>>>>> f1468ff42128a2cf902de99eb1bb00e391a42cda
     random_x = randrange(-120, 120)
     random_z = randrange(-120, 120)
     blockObj, blockData = mc.getBlockWithData(random_x, tpHeight, random_z)
