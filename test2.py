@@ -50,8 +50,8 @@ mc.setBlocks(127.7, -1, 127, -127.7, -1, -127, 2)
 # Create cross-roads
 createRoad(10, "North")
 createRoad(10, "South")
-createRoad(10, "East")
-createRoad(10, "West")
+#createRoad(10, "East")
+#createRoad(10, "West")
 
 # Lay down the intersection
-createIntersection()
+#createIntersection()
