@@ -1,7 +1,6 @@
 from mcpi.minecraft import Minecraft
 from random import randrange
 mc = Minecraft.create()
-x, y, z = mc.player.getPos()
 random_gm = randrange(1, 100) #gm = gridmap
 #gm_1 setup
 gm_1_mod_1 = randrange(1,2)
@@ -48,14 +47,14 @@ mc.setBlocks(x-5, y-1, z-5, x-3, y-1, z-3, 43)
 mc.setBlocks(x+5, y-1, z-5, x+3, y-1, z-3, 43)
 mc.setBlocks(x-5, y-1, z+5, x-3, y-1, z+3, 43)
 mc.setBlocks(x+3, y-1, z+3, x-3, y-1, z-3, 35, 15)
-#mc.player.setPos(x+5, y, z)
-#createRoad(4, "East")
-#mc.player.setPos(x-8, y, z)
-#createRoad(4, "West")
-#mc.player.setPos(x, y, z+5)
-#createRoad(4, "North")
-#mc.player.setPos(x, y, z-8)
-#createRoad(4, "South")
+mc.player.setPos(x+5, y, z)
+createRoad(4, "East")
+mc.player.setPos(x-8, y, z)
+createRoad(4, "West")
+mc.player.setPos(x, y, z+5)
+createRoad(4, "North")
+mc.player.setPos(x, y, z-8)
+createRoad(4, "South")
 #gridMap_1_module_1
 #if gm_1_mod_1 == 1:
 #    mc.player.setPos(x+5, y, z)
