@@ -45,13 +45,16 @@ def createIntersection():
 mc.setBlocks(127.7, -1, 127, -127.7, 63, -127, 0)
 mc.setBlocks(127.7, -1, 127, -127.7, -1, -127, 2)
 
-
+random_x = randrange(-120, 120)
+random_z = randrange(-120, 120)
+mc.player.setPos(random_x, 0, random_z)
+        
 
 # Create cross-roads
 createRoad(10, "North")
 createRoad(10, "South")
-#createRoad(10, "East")
-#createRoad(10, "West")
+createRoad(10, "East")
+createRoad(10, "West")
 
 # Lay down the intersection
-#createIntersection()
+createIntersection()

@@ -54,26 +54,39 @@ def clearMap():
     # Add a grass block layer
     mc.setBlocks(120, y-1, 120, -120, y-1, -120, 2)
 
-clearMap()
 
-time.sleep(5)
-
-#exit(0)
-
-mc.player.setPos(0, -30, 0)
-
-createIntersection()
+list = [0, 10, 20, 30, 40]
 
 x, y, z = mc.player.getPos()
 
-mc.player.setPos(x+5, y, z)
-createRoad(15, "East")
-mc.player.setPos(x-8, y, z)
-createRoad(15, "West")
-mc.player.setPos(x, y, z+5)
-createRoad(15, "North")
-mc.player.setPos(x, y, z-8)
-createRoad(15, "South")
+for coord in list:
+    mc.player.setPos(x+coord, y, z+coord)
+    createIntersection()
+    time.sleep(2)
+
+
+
+
+#clearMap()
+
+#time.sleep(5)
+
+#exit(0)
+
+#mc.player.setPos(0, -30, 0)
+
+#createIntersection()
+
+#x, y, z = mc.player.getPos()
+
+#mc.player.setPos(x+5, y, z)
+#createRoad(15, "East")
+#mc.player.setPos(x-8, y, z)
+#createRoad(15, "West")
+#mc.player.setPos(x, y, z+5)
+#createRoad(15, "North")
+#mc.player.setPos(x, y, z-8)
+#createRoad(15, "South")
 
 #gridMap_1_module_1
 #if gm_1_mod_1 == 1:
