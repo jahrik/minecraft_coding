@@ -1,11 +1,8 @@
 from mcpi.minecraft import Minecraft
 from random import randrange
+import time
 
 mc = Minecraft.create()
-
-random_gm = randrange(1, 100) #gm = gridmap
-#gm_1 setup
-gm_1_mod_1 = randrange(1, 3)
 
 def createRoad(length, direction):
     loops = 0
@@ -39,6 +36,7 @@ def createRoad(length, direction):
         loops = loops + 1
 
 def createIntersection():
+    # Get relative position
     x, y, z = mc.player.getPos()
 
     mc.setBlocks(x+5, y-1, z+5, x-5, y-1, z-5, 35, 15)
@@ -56,22 +54,26 @@ def clearMap():
     # Add a grass block layer
     mc.setBlocks(120, y-1, 120, -120, y-1, -120, 2)
 
-
-mc.player.setPos(60, -30, 60)
 clearMap()
+
+time.sleep(5)
+
+#exit(0)
+
+mc.player.setPos(0, -30, 0)
+
 createIntersection()
 
 x, y, z = mc.player.getPos()
 
 mc.player.setPos(x+5, y, z)
-createRoad(4, "East")
+createRoad(15, "East")
 mc.player.setPos(x-8, y, z)
-createRoad(4, "West")
+createRoad(15, "West")
 mc.player.setPos(x, y, z+5)
-createRoad(4, "North")
+createRoad(15, "North")
 mc.player.setPos(x, y, z-8)
-createRoad(4, "South")
-
+createRoad(15, "South")
 
 #gridMap_1_module_1
 #if gm_1_mod_1 == 1:
